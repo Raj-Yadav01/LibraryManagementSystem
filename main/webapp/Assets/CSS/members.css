@@ -1,0 +1,1079 @@
+@charset "UTF-8";
+
+/* =========================================================
+   MEMBERS PAGE
+   Library Management System
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+
+    color: #182f3f;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.dashboard-layout {
+    display: flex;
+
+    min-height: calc(100vh - 70px);
+}
+
+
+/* =========================================================
+   MEMBERS CONTENT
+========================================================= */
+
+.members-content {
+    flex: 1;
+
+    padding: 32px;
+
+    margin-left: 250px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.members-page-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.members-content .page-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.members-content .page-title-icon {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #20b486;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(32, 180, 134, 0.22);
+}
+
+
+.members-content .page-title h1 {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: #182f3f;
+
+    margin-bottom: 5px;
+}
+
+
+.members-content .page-title p {
+    font-size: 14px;
+
+    color: #7b8794;
+}
+
+
+/* =========================================================
+   ADD MEMBER BUTTON
+========================================================= */
+
+.add-member-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    height: 46px;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    background: #20b486;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 15px
+        rgba(32, 180, 134, 0.20);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.add-member-btn:hover {
+    background: #179b72;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px
+        rgba(32, 180, 134, 0.28);
+}
+
+
+.add-member-btn i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MEMBER SUMMARY
+========================================================= */
+
+.member-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.member-summary-card {
+    min-height: 105px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    border: 1px solid #edf0f3;
+
+    box-shadow:
+        0 5px 18px
+        rgba(31, 45, 61, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.member-summary-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 24px
+        rgba(31, 45, 61, 0.09);
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.member-summary-card .summary-icon {
+    width: 50px;
+
+    height: 50px;
+
+    min-width: 50px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+/* USERS */
+
+.member-summary-card .summary-icon.members {
+    background: #e8f7f2;
+
+    color: #20b486;
+}
+
+
+/* ACTIVE */
+
+.member-summary-card .summary-icon.active {
+    background: #eaf4ff;
+
+    color: #3182ce;
+}
+
+
+/* BORROWING */
+
+.member-summary-card .summary-icon.borrowing {
+    background: #fff4e8;
+
+    color: #e99b3d;
+}
+
+
+/* =========================================================
+   SUMMARY TEXT
+========================================================= */
+
+.member-summary-card span {
+    display: block;
+
+    color: #7b8794;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+
+.member-summary-card strong {
+    display: block;
+
+    color: #182f3f;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MEMBERS CARD
+========================================================= */
+
+.members-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf0f3;
+
+    box-shadow:
+        0 6px 22px
+        rgba(31, 45, 61, 0.06);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.members-card-header {
+    min-height: 90px;
+
+    padding: 20px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+
+.members-card-header h2 {
+    color: #182f3f;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.members-card-header p {
+    color: #8a96a3;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MEMBER SEARCH
+========================================================= */
+
+.member-search {
+    width: 280px;
+
+    height: 42px;
+
+    position: relative;
+}
+
+
+.member-search i {
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9aa5b1;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+
+.member-search input {
+    width: 100%;
+
+    height: 100%;
+
+    padding:
+        0 15px 0 40px;
+
+    border: 1px solid #dfe4e8;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.member-search input::placeholder {
+    color: #a7afb7;
+}
+
+
+.member-search input:focus {
+    border-color: #20b486;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(32, 180, 134, 0.10);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.members-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   MEMBERS TABLE
+========================================================= */
+
+.members-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.members-table thead {
+    background:
+        linear-gradient(
+            135deg,
+            #075f68,
+            #159b86
+        );
+}
+
+
+.members-table thead th {
+    padding: 15px 18px;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+.members-table thead th:first-child {
+    width: 55px;
+
+    text-align: center;
+}
+
+
+.members-table thead th:last-child {
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.members-table tbody tr {
+    border-bottom: 1px solid #edf0f3;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.members-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+.members-table tbody tr:hover {
+    background: #f8fbfa;
+}
+
+
+.members-table tbody td {
+    padding: 16px 18px;
+
+    color: #4e5d6c;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MEMBER ID
+========================================================= */
+
+.member-id {
+    width: 28px;
+
+    height: 28px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f0f4f6;
+
+    color: #637381;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MEMBER INFORMATION
+========================================================= */
+
+.member-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   MEMBER AVATAR
+========================================================= */
+
+.member-avatar {
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #20b486;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* BLUE */
+
+.member-avatar.avatar-blue {
+    background: #3182ce;
+}
+
+
+/* PURPLE */
+
+.member-avatar.avatar-purple {
+    background: #805ad5;
+}
+
+
+/* ORANGE */
+
+.member-avatar.avatar-orange {
+    background: #dd8b27;
+}
+
+
+/* =========================================================
+   MEMBER NAME
+========================================================= */
+
+.member-info strong {
+    display: block;
+
+    color: #263746;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+
+.member-info small {
+    display: block;
+
+    color: #98a3ad;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.status i {
+    font-size: 6px;
+}
+
+
+/* ACTIVE */
+
+.active-status {
+    background: #e9f8f1;
+
+    color: #159b72;
+}
+
+
+.active-status i {
+    color: #20b486;
+}
+
+
+/* INACTIVE */
+
+.inactive-status {
+    background: #f3f4f5;
+
+    color: #7d8790;
+}
+
+
+.inactive-status i {
+    color: #a5adb4;
+}
+
+
+/* =========================================================
+   BOOKS COUNT
+========================================================= */
+
+.books-count {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #eef5ff;
+
+    color: #3976b8;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.action-buttons a {
+    width: 32px;
+
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.action-buttons a:hover {
+    transform: translateY(-1px);
+}
+
+
+/* VIEW */
+
+.view-btn {
+    background: #eef6ff;
+
+    color: #3182ce;
+}
+
+
+.view-btn:hover {
+    background: #3182ce;
+
+    color: #ffffff;
+}
+
+
+/* EDIT */
+
+.edit-btn {
+    background: #fff6e9;
+
+    color: #e99b3d;
+}
+
+
+.edit-btn:hover {
+    background: #e99b3d;
+
+    color: #ffffff;
+}
+
+
+/* DELETE */
+
+.delete-btn {
+    background: #fff0f1;
+
+    color: #dc3545;
+}
+
+
+.delete-btn:hover {
+    background: #dc3545;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE SCROLLBAR
+========================================================= */
+
+.members-table-wrapper::-webkit-scrollbar {
+    height: 7px;
+}
+
+
+.members-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f3f5;
+}
+
+
+.members-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c7d0d5;
+
+    border-radius: 10px;
+}
+
+
+.members-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #aeb9bf;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .members-content {
+        padding: 25px;
+
+        margin-left: 220px;
+    }
+
+
+    .member-summary {
+        gap: 15px;
+    }
+
+
+    .member-summary-card {
+        padding: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .members-content {
+        margin-left: 0;
+
+        padding: 22px;
+    }
+
+
+    .members-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .add-member-btn {
+        width: 100%;
+    }
+
+
+    .member-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .members-card-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .member-search {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .members-content {
+        padding: 16px;
+    }
+
+
+    .members-content .page-title-icon {
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 18px;
+    }
+
+
+    .members-content .page-title h1 {
+        font-size: 23px;
+    }
+
+
+    .members-content .page-title p {
+        font-size: 12px;
+    }
+
+
+    .members-card-header {
+        padding: 18px;
+    }
+
+
+    .members-card-header h2 {
+        font-size: 17px;
+    }
+
+
+    .members-card-header p {
+        font-size: 12px;
+    }
+
+
+    .member-summary-card {
+        min-height: 90px;
+    }
+
+
+    .member-summary-card .summary-icon {
+        width: 44px;
+
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 18px;
+    }
+
+
+    .member-summary-card strong {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .members-content {
+        padding: 12px;
+    }
+
+
+    .members-content .page-title {
+        gap: 10px;
+    }
+
+
+    .members-content .page-title h1 {
+        font-size: 21px;
+    }
+
+
+    .add-member-btn {
+        height: 43px;
+
+        font-size: 13px;
+    }
+
+
+    .member-summary-card {
+        padding: 14px;
+    }
+
+}
+
+
+
+/* =========================================
+   ADD MEMBER BUTTON
+========================================= */
+
+.add-member-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    background: #20b486;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(32, 180, 134, 0.20);
+
+    transition: all 0.2s ease;
+}
+
+.add-member-btn i {
+    font-size: 14px;
+}
+
+.add-member-btn:hover {
+    background: #159a73;
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 14px rgba(32, 180, 134, 0.28);
+}

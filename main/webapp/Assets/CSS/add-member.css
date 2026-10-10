@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* =========================================
+   ADD MEMBER CARD
+========================================= */
+
+.add-member-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e6f7f1;
+
+    color: #20b486;
+
+    font-size: 22px;
+}
+
+.form-header h2 {
+    margin: 0;
+
+    color: #172b3a;
+
+    font-size: 22px;
+}
+
+.form-header p {
+    margin: 5px 0 0;
+
+    color: #718096;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d9e2ec;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #172b3a;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #9aa6b2;
+}
+
+.form-group input:focus {
+    border-color: #20b486;
+
+    box-shadow: 0 0 0 3px rgba(32, 180, 134, 0.12);
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    background: #eef2f7;
+
+    color: #435466;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+    background: #e2e8f0;
+
+    color: #172b3a;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #20b486;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(32, 180, 134, 0.20);
+
+    transition: all 0.2s ease;
+}
+
+.save-button:hover {
+    background: #159a73;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 7px 16px rgba(32, 180, 134, 0.28);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .add-member-card {
+        margin: 20px auto;
+        padding: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .add-member-card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .form-header {
+        align-items: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;s
+    }
+
+}
+
+
+/* =========================================
+   FORM MESSAGE
+========================================= */
+
+.form-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+    padding: 13px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.error-message {
+    background: #fff1f2;
+    color: #dc2626;
+    border: 1px solid #fecdd3;
+}
